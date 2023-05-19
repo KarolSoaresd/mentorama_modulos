@@ -1,0 +1,22 @@
+{
+  "name": "mentorama_modulos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarolSoaresd/mentorama_modulos.git"
+  },
+  "author": "Karoline Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarolSoaresd/mentorama_modulos/issues"
+  },
+  "homepage": "https://github.com/KarolSoaresd/mentorama_modulos#readme",
+  "dependencies": {
+    "cypress": "^9.7.0"
+  }
+}
