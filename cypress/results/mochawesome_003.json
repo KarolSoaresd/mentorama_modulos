@@ -1,0 +1,241 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-20T14:12:44.085Z",
+    "end": "2023-05-20T14:13:18.670Z",
+    "duration": 34585,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2bc6b3c8-9309-405d-82e6-7fc84ad82679",
+      "title": "",
+      "fullFile": "cypress/integration/modulo4.cy.js",
+      "file": "cypress/integration/modulo4.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a2b6f9e1-bdcb-4d6f-97e7-55c7f30dfba3",
+          "title": "Validar funcionamento da aba de Novidades do site",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve incluir item no carrinho",
+              "fullTitle": "Validar funcionamento da aba de Novidades do site Deve incluir item no carrinho",
+              "timedOut": null,
+              "duration": 1608,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.incluirNoCarrinho();\ncy.botãoFirstItem().should('contain', 'PAGAMENTO');",
+              "err": {},
+              "uuid": "c67e3a0b-a0bc-4eae-b6de-c8b1031cbd96",
+              "parentUUID": "a2b6f9e1-bdcb-4d6f-97e7-55c7f30dfba3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c67e3a0b-a0bc-4eae-b6de-c8b1031cbd96"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1608,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "f5ab517e-51b3-4531-9074-0547847bffac",
+          "title": "Realizar login e cadastro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Devo realizar login com dados corretos",
+              "fullTitle": "Realizar login e cadastro Devo realizar login com dados corretos",
+              "timedOut": null,
+              "duration": 3337,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.realizarLogin('tomsmith');\ncy.loginRealizadoComSucesso();",
+              "err": {},
+              "uuid": "58ba6d81-0e4c-49ae-a095-183bd7eee8c7",
+              "parentUUID": "f5ab517e-51b3-4531-9074-0547847bffac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Realizar cadastro no site",
+              "fullTitle": "Realizar login e cadastro Realizar cadastro no site",
+              "timedOut": null,
+              "duration": 18757,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://signup.heroku.com/login'); // cy.clock()\ncy.wait(2000);\ncy.get('#onetrust-accept-btn-handler').click();\ncy.contains('First name').type('Karol');\ncy.get('#first_name').clear();\ncy.contains('First name').type('Karol');\ncy.xpath('//*[@id=\"last_name\"]').type('Santos');\ncy.get('#email').type('karol@mentorama.com');\ncy.get('#company').type('Mentorama');\ncy.get('[style=\"width: 304px; height: 78px;\"] > div > iframe').click();\ncy.get('#role').select(3);\ncy.get('#self_declared_country').select('Brazil');\ncy.xpath('//*[@id=\"main_programming_language\"]').select(2);\ncy.get(':nth-child(14) > .btn').click();\ncy.get('.signup > :nth-child(1)').should('be.visible'); // cy.tick(3000)",
+              "err": {},
+              "uuid": "13e4fa71-2de1-4061-ad3b-20d7c95a043b",
+              "parentUUID": "f5ab517e-51b3-4531-9074-0547847bffac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "58ba6d81-0e4c-49ae-a095-183bd7eee8c7",
+            "13e4fa71-2de1-4061-ad3b-20d7c95a043b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 22094,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "a99fba88-e380-4fff-b07c-2f1247999987",
+          "title": "Validar push e popup de confirmacoes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Devo esconder elemento",
+              "fullTitle": "Validar push e popup de confirmacoes Devo esconder elemento",
+              "timedOut": null,
+              "duration": 644,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/disappearing_elements');\ncy.get(':nth-child(1) > a').invoke('hide');\ncy.get(':nth-child(1) > a').should('not.be.visible');",
+              "err": {},
+              "uuid": "63f911d6-c186-4b04-a3df-b6fdd92f2f7e",
+              "parentUUID": "a99fba88-e380-4fff-b07c-2f1247999987",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Devo aceitar pop-up",
+              "fullTitle": "Validar push e popup de confirmacoes Devo aceitar pop-up",
+              "timedOut": null,
+              "duration": 703,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/javascript_alerts');\ncy.get(':nth-child(2) > button').click();\ncy.get('#result').should('contain', 'You clicked: Ok');",
+              "err": {},
+              "uuid": "6dc699e9-081f-4d2e-be62-2fc7de61cb0f",
+              "parentUUID": "a99fba88-e380-4fff-b07c-2f1247999987",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Devo visualizar push de alerta",
+              "fullTitle": "Validar push e popup de confirmacoes Devo visualizar push de alerta",
+              "timedOut": null,
+              "duration": 584,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/javascript_alerts');\ncy.get(':nth-child(1) > button').click();",
+              "err": {},
+              "uuid": "f5e812c2-d0c0-4d97-a8c4-150ca6abb47e",
+              "parentUUID": "a99fba88-e380-4fff-b07c-2f1247999987",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "63f911d6-c186-4b04-a3df-b6fdd92f2f7e",
+            "6dc699e9-081f-4d2e-be62-2fc7de61cb0f",
+            "f5e812c2-d0c0-4d97-a8c4-150ca6abb47e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1931,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "video": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

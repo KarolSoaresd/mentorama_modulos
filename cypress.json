@@ -1,1 +1,15 @@
-{}
+{
+    "viewportWidth": 1440,
+    "viewportHeight": 757,
+    "defaultCommandTimeout": 10000,
+    "baseUrl": "https://lm.mentorama.com.br/qa_auto/livraria/",
+    "retries": 2,
+    "reporter": "mochawesome",
+        "reporterOptions": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "video": true,
+        "json": true
+    }
+}

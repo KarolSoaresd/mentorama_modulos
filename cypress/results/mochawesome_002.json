@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-05-20T14:12:02.827Z",
+    "end": "2023-05-20T14:12:31.948Z",
+    "duration": 29121,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "103276af-3d56-474a-990f-f510531737fa",
+      "title": "",
+      "fullFile": "cypress/integration/modulo3.cy.js",
+      "file": "cypress/integration/modulo3.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b8594afa-9451-42d1-b109-848edf078f7f",
+          "title": "Validar funcionamento do formulário",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Realizar cadastro no site",
+              "fullTitle": "Validar funcionamento do formulário Realizar cadastro no site",
+              "timedOut": null,
+              "duration": 19787,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#onetrust-accept-btn-handler').click();\ncy.contains('First name').type('Karol');\ncy.get('#first_name').clear();\ncy.contains('First name').type('Karol');\ncy.xpath('//*[@id=\"last_name\"]').type('Santos');\ncy.get('#email').type('karol@mentorama.com');\ncy.get('#company').type('Mentorama');\ncy.get('[style=\"width: 304px; height: 78px;\"] > div > iframe').click();\ncy.get('#role').select(3);\ncy.get('#self_declared_country').select('Brazil');\ncy.xpath('//*[@id=\"main_programming_language\"]').select(2);\ncy.get(':nth-child(14) > .btn').click();\ncy.get('.signup > :nth-child(1)').should('be.visible');",
+              "err": {},
+              "uuid": "d90bd003-2a22-485e-9fe3-bfbc4fb4f213",
+              "parentUUID": "b8594afa-9451-42d1-b109-848edf078f7f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d90bd003-2a22-485e-9fe3-bfbc4fb4f213"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19787,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "1f4e2abc-5f21-46aa-8a3b-4ce1c872e756",
+          "title": "Realizar validações de campos mais distintos",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Testando check",
+              "fullTitle": "Realizar validações de campos mais distintos Testando check",
+              "timedOut": null,
+              "duration": 2092,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/checkboxes');\ncy.xpath('//*[@id=\"checkboxes\"]/input[1]').check().should('be.checked');\ncy.xpath('//*[@id=\"checkboxes\"]/input[2]').uncheck().should('not.be.checked');\ncy.url().should('be.equal', 'http://the-internet.herokuapp.com/checkboxes');",
+              "err": {},
+              "uuid": "a246a6a2-de9b-49aa-8c45-085cef476edb",
+              "parentUUID": "1f4e2abc-5f21-46aa-8a3b-4ce1c872e756",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Upload de arquivos",
+              "fullTitle": "Realizar validações de campos mais distintos Upload de arquivos",
+              "timedOut": null,
+              "duration": 1089,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/upload');\ncy.get('#file-upload').selectFile('cypress/fixtures/massa.json');\ncy.get('#file-submit').click();\ncy.get('h3').should('be.visible');\ncy.xpath('//*[@id=\"uploaded-files\"]').should('contain', 'massa.json');",
+              "err": {},
+              "uuid": "2796b56f-aea8-4c06-aaa1-a8df030c5ae9",
+              "parentUUID": "1f4e2abc-5f21-46aa-8a3b-4ce1c872e756",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a246a6a2-de9b-49aa-8c45-085cef476edb",
+            "2796b56f-aea8-4c06-aaa1-a8df030c5ae9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3181,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "video": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
