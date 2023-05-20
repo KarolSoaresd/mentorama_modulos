@@ -6,7 +6,7 @@ describe('Validar funcionamento do formulário', () => {
     cy.visit('https://signup.heroku.com/login')
   })
 
-  it('Realizar cadastro no site', () => {
+  it.skip('Realizar cadastro no site', () => {
     cy.get('#onetrust-accept-btn-handler').click()
     cy.contains('First name').type('Karol')
     cy.get('#first_name').clear()

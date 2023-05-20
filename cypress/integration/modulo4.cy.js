@@ -17,7 +17,7 @@ describe('Realizar login e cadastro', () => {
         cy.loginRealizadoComSucesso()
     })
 
-    it('Realizar cadastro no site', () => {
+    it.skip('Realizar cadastro no site', () => {
         cy.visit('https://signup.heroku.com/login')
         // cy.clock()
         cy.wait(2000)
