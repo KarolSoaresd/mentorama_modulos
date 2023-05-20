@@ -33,11 +33,9 @@ describe('Realizar validações de campos mais distintos', () => {
 
   it('Upload de arquivos', () => {
     cy.visit('http://the-internet.herokuapp.com/upload')
-    cy.get('#file-upload').selectFile('cypress/fixtures/example.json')
+    cy.get('#file-upload').selectFile('cypress/fixtures/massa.json')
     cy.get('#file-submit').click()
     cy.get('h3').should('be.visible')
-    cy.xpath('//*[@id="uploaded-files"]').should('contain', 'example.json')
-
-
+    cy.xpath('//*[@id="uploaded-files"]').should('contain', 'massa.json')
   })
 })
