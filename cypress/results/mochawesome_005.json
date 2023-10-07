@@ -1,0 +1,242 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 5,
+    "pending": 1,
+    "failures": 0,
+    "start": "2023-10-07T17:29:32.817Z",
+    "end": "2023-10-07T17:29:43.114Z",
+    "duration": 10297,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 16.666666666666664,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dc14633f-cdca-4f6f-8c1a-fd3eb6172a47",
+      "title": "",
+      "fullFile": "cypress/integration/modulo4.cy.js",
+      "file": "cypress/integration/modulo4.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ad2ba23a-7a39-4b2e-a00d-192657e159b7",
+          "title": "Validar funcionamento da aba de Novidades do site",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve incluir item no carrinho",
+              "fullTitle": "Validar funcionamento da aba de Novidades do site Deve incluir item no carrinho",
+              "timedOut": null,
+              "duration": 926,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.incluirNoCarrinho();\ncy.botãoFirstItem().should('contain', 'PAGAMENTO');",
+              "err": {},
+              "uuid": "d003a28f-6570-4d34-bcbe-8c0aad6a7d0a",
+              "parentUUID": "ad2ba23a-7a39-4b2e-a00d-192657e159b7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d003a28f-6570-4d34-bcbe-8c0aad6a7d0a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 926,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "bd4b1103-dfc5-4cff-aaad-cfe34af54fb4",
+          "title": "Realizar login e cadastro",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Devo realizar login com dados corretos",
+              "fullTitle": "Realizar login e cadastro Devo realizar login com dados corretos",
+              "timedOut": null,
+              "duration": 4896,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.realizarLogin('tomsmith');\ncy.loginRealizadoComSucesso();",
+              "err": {},
+              "uuid": "c4ef4d37-97dd-435c-af70-bf2052b1c8c7",
+              "parentUUID": "bd4b1103-dfc5-4cff-aaad-cfe34af54fb4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Realizar cadastro no site",
+              "fullTitle": "Realizar login e cadastro Realizar cadastro no site",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "29e0ded0-398c-4562-9bfc-1adfa427b60f",
+              "parentUUID": "bd4b1103-dfc5-4cff-aaad-cfe34af54fb4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c4ef4d37-97dd-435c-af70-bf2052b1c8c7"
+          ],
+          "failures": [],
+          "pending": [
+            "29e0ded0-398c-4562-9bfc-1adfa427b60f"
+          ],
+          "skipped": [],
+          "duration": 4896,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "58b29e75-a65c-4f37-95b0-175e0719ff72",
+          "title": "Validar push e popup de confirmacoes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Devo esconder elemento",
+              "fullTitle": "Validar push e popup de confirmacoes Devo esconder elemento",
+              "timedOut": null,
+              "duration": 685,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/disappearing_elements');\ncy.get(':nth-child(1) > a').invoke('hide');\ncy.get(':nth-child(1) > a').should('not.be.visible');",
+              "err": {},
+              "uuid": "ef9bbc9e-f52e-4d68-b6c6-30e0bdba221e",
+              "parentUUID": "58b29e75-a65c-4f37-95b0-175e0719ff72",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Devo aceitar pop-up",
+              "fullTitle": "Validar push e popup de confirmacoes Devo aceitar pop-up",
+              "timedOut": null,
+              "duration": 626,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/javascript_alerts');\ncy.get(':nth-child(2) > button').click();\ncy.get('#result').should('contain', 'You clicked: Ok');",
+              "err": {},
+              "uuid": "29268ceb-610f-4266-8b7b-96d786752e6c",
+              "parentUUID": "58b29e75-a65c-4f37-95b0-175e0719ff72",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Devo visualizar push de alerta",
+              "fullTitle": "Validar push e popup de confirmacoes Devo visualizar push de alerta",
+              "timedOut": null,
+              "duration": 612,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/javascript_alerts');\ncy.get(':nth-child(1) > button').click();",
+              "err": {},
+              "uuid": "e9ceb9a1-dba6-49a5-bc83-4ba431faab1b",
+              "parentUUID": "58b29e75-a65c-4f37-95b0-175e0719ff72",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ef9bbc9e-f52e-4d68-b6c6-30e0bdba221e",
+            "29268ceb-610f-4266-8b7b-96d786752e6c",
+            "e9ceb9a1-dba6-49a5-bc83-4ba431faab1b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1923,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "video": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

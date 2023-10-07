@@ -7,7 +7,7 @@ describe('Validar funcionamento da aba de Novidades do site', () => {
 
     it('Deve incluir item no carrinho', () => {
         cy.incluirNoCarrinho()
-        cy.botãoFirstItem().should('contain','PAGAME00TO')
+        cy.botãoFirstItem().should('contain','PAGAMENTO')
     })
 })
 
