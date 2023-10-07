@@ -1,1 +1,16 @@
-{}
+{
+    "viewportWidth": 1440,
+    "viewportHeight": 757,
+    "timeoutDefault": 10000,
+    "baseUrl": "https://lm.mentorama.com.br",
+    "retries": 2,
+    "reporter": "mochawesome",
+       "reporterOptions": {
+       "reportDir": "cypress/report/mochawesome-report",
+       "overwrite": true,
+       "html": true,
+       "video": true,
+       "json": false,
+       "timestamp": "mmddyyyy_HHMMss"
+   }
+}
